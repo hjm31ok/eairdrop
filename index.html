@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h1>Alpha Hub</h1>
+                <p>by chain</p>
+            </div>
+            <ul>
+                <li class="active" data-target="monad-testnet-table">?? Monad Testnet</li>
+                <li data-target="lens-testnet-table">??? Lens Testnet</li>
+                <li data-target="ink-table">??? Ink</li>
+            </ul>
+        </nav>
+        <!-- 右侧内容 -->
+        <main class="content">
+            <!-- 顶部功能区 -->
+            <div class="top-section">
+                <div class="rpc-node-section">
+                    <p>1. Choose a Best RPC Node</p>
+                    <button class="add-btn">Add</button>
+                </div>
+                <div class="gas-token-section">
+                    <p>2. Get Test Gas Token</p>
+                    <p>Get 0.15 SMONAD TOKEN every 48 hours</p>
+                    <p><a href="#">Official Monad Faucet</a></p>
+                </div>
+                <button class="connect-wallet-btn">Connect Wallet</button>
+            </div>
+            <!-- 表格 -->
+            <div class="tables">
+                <table id="monad-testnet-table" class="table active">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Website</th>
+                            <th>Twitter</th>
+                            <th>Category</th>
+                            <th>Tasks/Actions</th>
+                            <th>Importance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ambient</td>
+                            <td><a href="#">OFFICIAL WEBSITE</a></td>
+                            <td><a href="#">OFFICIAL TWITTER</a></td>
+                            <td>DEX</td>
+                            <td>Swap/Trade/LP</td>
+                            <td>★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>aPriori</td>
+                            <td><a href="#">OFFICIAL WEBSITE</a></td>
+                            <td><a href="#">OFFICIAL TWITTER</a></td>
+                            <td>LSDfi</td>
+                            <td>Stake</td>
+                            <td>★★★★☆</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="lens-testnet-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Website</th>
+                            <th>Twitter</th>
+                            <th>Category</th>
+                            <th>Tasks/Actions</th>
+                            <th>Importance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Project B</td>
+                            <td><a href="#">projectb.com</a></td>
+                            <td><a href="#">@projectb</a></td>
+                            <td>Lens</td>
+                            <td>Task 2</td>
+                            <td>★★★☆☆</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="ink-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Website</th>
+                            <th>Twitter</th>
+                            <th>Category</th>
+                            <th>Tasks/Actions</th>
+                            <th>Importance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Project C</td>
+                            <td><a href="#">projectc.com</a></td>
+                            <td><a href="#">@projectc</a></td>
+                            <td>Ink</td>
+                            <td>Task 3</td>
+                            <td>★★☆☆☆</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 底部订阅按钮 -->
+            <a href="https://t.me/alphahub_degate" class="subscribe-btn">Subscribe to our channel @alphahub_degate</a>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
