@@ -1,23 +1,22 @@
 backend:
-  name: github
-  repo: hjm31ok/eairdrop
-  branch: main  # 确保分支名称正确（通常是 main 或 master）
-media_folder: "assets" # 上传图片等媒体文件存放的文件夹
+  name: git-gateway
+  branch: main
+media_folder: "assets"
 public_folder: "/assets"
 collections:
-  - name: "nav-items" # 导航栏项
+  - name: "nav-items"
     label: "Navigation Items"
     folder: "content/nav-items"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Icon", name: "icon", widget: "string"} # 可以使用 emoji 或图片 URL
-  - name: "tables" # 表格内容
+      - {label: "Icon", name: "icon", widget: "string"}
+  - name: "tables"
     label: "Tables"
     folder: "content/tables"
     create: true
     fields:
-      - {label: "Table ID", name: "tableId", widget: "string"} # 对应导航项的表格 ID
+      - {label: "Table ID", name: "tableId", widget: "string"}
       - {label: "Rows", name: "rows", widget: "list", fields: [
           {label: "Name", name: "name", widget: "string"},
           {label: "Website", name: "website", widget: "string"},
