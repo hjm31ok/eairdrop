@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: hjm31ok/eairdrop
+  branch: main  # 确保分支名称正确（通常是 main 或 master）
 media_folder: "assets" # 上传图片等媒体文件存放的文件夹
 public_folder: "/assets"
 collections:
