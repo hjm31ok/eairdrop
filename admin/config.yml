@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-username/eairdrop
+  repo: hjm31ok/eairdrop
 media_folder: "assets" # 上传图片等媒体文件存放的文件夹
 public_folder: "/assets"
 collections:
