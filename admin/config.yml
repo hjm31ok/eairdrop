@@ -1,27 +1,27 @@
 backend:
   name: github
-  repo: your-username/alpha-hub
-media_folder: "assets" # ÉÏ´«Í¼Æ¬µÈÃ½ÌåÎÄ¼ş´æ·ÅµÄÎÄ¼ş¼Ğ
+  repo: your-username/eairdrop
+media_folder: "assets" # ä¸Šä¼ å›¾ç‰‡ç­‰åª’ä½“æ–‡ä»¶å­˜æ”¾çš„æ–‡ä»¶å¤¹
 public_folder: "/assets"
 collections:
-  - name: "nav-items" # µ¼º½À¸Ïî
+  - name: "nav-items" # å¯¼èˆªæ é¡¹
     label: "Navigation Items"
     folder: "content/nav-items"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Icon", name: "icon", widget: "string"} # ¿ÉÒÔÊ¹ÓÃ emoji »òÍ¼Æ¬ URL
-  - name: "tables" # ±í¸ñÄÚÈİ
+      - {label: "Icon", name: "icon", widget: "string"} # å¯ä»¥ä½¿ç”¨ emoji æˆ–å›¾ç‰‡ URL
+  - name: "tables" # è¡¨æ ¼å†…å®¹
     label: "Tables"
     folder: "content/tables"
     create: true
     fields:
-      - {label: "Table ID", name: "tableId", widget: "string"} # ¶ÔÓ¦µ¼º½ÏîµÄ±í¸ñ ID
+      - {label: "Table ID", name: "tableId", widget: "string"} # å¯¹åº”å¯¼èˆªé¡¹çš„è¡¨æ ¼ ID
       - {label: "Rows", name: "rows", widget: "list", fields: [
           {label: "Name", name: "name", widget: "string"},
           {label: "Website", name: "website", widget: "string"},
           {label: "Twitter", name: "twitter", widget: "string"},
           {label: "Category", name: "category", widget: "string"},
           {label: "Tasks/Actions", name: "tasks", widget: "string"},
-          {label: "Importance", name: "importance", widget: "select", options: ["¡ï¡ï¡ï¡ï¡ï", "¡ï¡ï¡ï¡ï¡î", "¡ï¡ï¡ï¡î¡î", "¡ï¡ï¡î¡î¡î", "¡ï¡î¡î¡î¡î"]}
+          {label: "Importance", name: "importance", widget: "select", options: ["â˜…â˜…â˜…â˜…â˜…", "â˜…â˜…â˜…â˜…â˜†", "â˜…â˜…â˜…â˜†â˜†", "â˜…â˜…â˜†â˜†â˜†", "â˜…â˜†â˜†â˜†â˜†"]}
         ]}
