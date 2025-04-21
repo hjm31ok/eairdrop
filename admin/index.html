@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netlify CMS</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netlify CMS</title>
+  <!-- 加载 Supabase 脚本 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 </head>
 <body>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    // 初始化 Supabase
+    const supabase = Supabase.createClient(
+      'https://your-project.supabase.co', // 替换为你的 Supabase API URL
+      'your-anon-key' // 替换为你的 Anon Key
+    );
+
+    // 登录按钮
+    window.supabaseLogin = async () => {
+      await supabase.auth.signInWithOAuth({
+        provider: 'github',
+        options: {
+          redirectTo: 'https://eairdrop.netlify.app/admin/',
+        },
+      });
+    };
+
+    // 检查登录状态
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        CMS.registerBackend('git-gateway', {
+          init: () => {},
+          auth: () => ({
+            login: () => supabaseLogin(),
+            getToken: async () => (await supabase.auth.getSession()).data.session.access_token,
+          }),
+        });
+      }
+    });
+
+    // 监听 Supabase 登录状态变化
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_IN') {
+        CMS.init();
+      }
+    });
+  </script>
 </body>
 </html>
